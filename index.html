@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mening Soatim</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shashka — 30 davlat</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="R.jpg" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <div class="clock-container">
-            <div class="clock">
-                <div class="hour-numbers" id="hourNumbers"></div>
-                <div class="hour-hand" id="hourHand"></div>
-                <div class="minute-hand" id="minuteHand"></div>
-                <div class="second-hand" id="secondHand"></div>
-                <div class="clock-center"></div>
-            </div>
-            
-            <div class="digital-clock">
-                <div class="time-display" id="digitalTime">00:00:00</div>
-                <div class="date-display" id="digitalDate">Dushanba, 1 Yanvar 2023</div>
-            </div>
+    <h1>Shashka — 30 davlat</h1>
+
+    <div class="bar">
+        <div class="flags" id="flags"></div>
+        <div class="modes">
+            <button id="twoBtn">👥 Ikki o‘yinchi</button>
+            <button id="botBtn">🤖 Bot (Oq siz, Qora — bot)</button>
         </div>
     </div>
+
+    <div class="wrap hidden" id="wrap">
+        <div class="board-wrap">
+            <div id="board" class="board" aria-label="Shashka taxtasi"></div>
+        </div>
+        <aside class="side">
+            <div class="status">
+                <div class="tag" id="turnTag">Navbat: Oq</div>
+                <div style="display:flex; gap:8px;">
+                    <button id="newBtn" class="secondary">Yangi o‘yin</button>
+                </div>
+            </div>
+            <div class="note" id="ruleNote"></div>
+            <div class="footer">© <span id="year"></span>. <b>Yaratuvchi: Orziqulov Nurulloh Fayzulla o`g`li</b></div>
+        </aside>
+    </div>
+
+    <div id="winbar" class="winbar hidden">🎉 G‘alaba!</div>
+    <div id="confetti" class="confetti"></div>
 
     <script src="script.js"></script>
 </body>
